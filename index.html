@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+        
+    <script>
+
+        const jednostka = prompt('Na jaką jednostkę chcesz przyliczyć? Km czy mile?');
+        const liczba = parseFloat(prompt('Podaj ilość km/mil do przeliczenia'));
+
+        while (isNaN(liczba)) {
+            const liczba = Number(prompt('Podaj poprawną ilość km/mil do przeliczenia'));
+            if(!isNaN(liczba)){
+                break;
+            }
+        }
+
+        switch (jednostka) {
+            case 'km':
+                documet.write( liczba, 'mil to ', (liczba * 1.6) , 'km');
+                break;
+
+            case 'mile':
+                documet.write( liczba, 'km to ', (liczba / 1.6) , 'mil');
+                break;
+            default:
+                documet.write( 'nie znam jednostki', liczba);
+                break;
+        }
+
+    
+    </script>
+</body>
+</html>
+
